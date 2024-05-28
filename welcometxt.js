@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         setTimeout(function () {
           typeWriter(text, i + 1, fnCallback);
-        }, 200);
+        }, 100);
       }
       else if (typeof fnCallback == "function") {
-        setTimeout(fnCallback, 700);
+        setTimeout(fnCallback, 500);
       }
     }
     function StartTextAnimation(i) {
