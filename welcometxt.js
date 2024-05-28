@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         "Webdeveloper.",
         "uiuxdesigner!",
         "cool xd.",
-        "Shaka aufa 👋🌱.",
+        "Shaka 👋🌱.",
     ];
 
     function typeWriter(text, i, fnCallback) {
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         setTimeout(function () {
           typeWriter(text, i + 1, fnCallback);
-        }, 100);
+        }, 200);
       }
       else if (typeof fnCallback == "function") {
         setTimeout(fnCallback, 700);
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       if (typeof dataText[i] == "undefined") {
         setTimeout(function () {
           StartTextAnimation(0);
-        }, 20000);
+        }, 3000);
       }
       if (i < dataText[i].length) {
         typeWriter(dataText[i], 0, function () {
