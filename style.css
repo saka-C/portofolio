@@ -6,11 +6,11 @@
   --primary-color: #120439;
   --primary-color-light: #ffffff;
   --shadow-color: rgba(199, 199, 199, 0.959);
-  --bg-white: #FAFAFA;
+  --bg-white: #f7f7f7;
   --text-color: #000000;
-  --stroke-color: #ddd;
+  --stroke-color: #ececec;
   --footer-color: #151220;
-  --footer-text: #a2a2a3;
+  --footer-text: #a2a2a380;
 }
 
 * {
@@ -36,6 +36,11 @@ body {
   transition: var(--tran-04);
   scroll-behavior: smooth;
 }
+.bxl-html5{ color: #ee7402;}
+.bxl-css3{ color: #3F5EF4;}
+.bxl-javascript{ color: #f7de01;}
+.bxl-php{ color: #67008B; font-size: 25px;}
+
 .overlay{
   position: fixed;
   width: 100vw;
@@ -242,6 +247,8 @@ header .left{
   padding: 20px;
   transform: translateY(100px); 
   transition: all 0.5s ease-out;
+}
+.stack .card i{
   color: rgb(71, 71, 71);
 }
 .stack .stack-animation {
@@ -303,75 +310,100 @@ header .left{
   }
 }
 
-.portofolio{
+.project{
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 80px;
   justify-content: center;
-  background-color: var(--primary-color-light);
+  background-color: var(--bg-white);
   padding: 60px 10px;
 }
-.portofolio .title{
+.project .title{
   padding: 20px;
 }
-.portofolio .title h1{
+.project .title h1{
   font-family: 'Sansation', sans-serif;  
   font-weight: 700;      
   font-size: 30px;  
   border-left: 4px solid #5551FF; 
   padding-left: 20px;
 }
-.portofolio .card-porto{
+.project .card-porto{
   background-color: var(--primary-color-light);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 15px;
-  width: 20vw;
+  width: 25vw;
   border-radius: 20px;
-  box-shadow: 0 50px 100px var(--shadow-color);
-  border: 1px solid var(--stroke-color);
   transform: translateY(100px); 
+  border: 1px solid var(--stroke-color);
   transition: all 0.5s ease-out;
 }
-.portofolio .card-animation{
+.project .card-porto:hover{
+  box-shadow: 0px 10px 20px var(--shadow-color);
+}
+.project .card-porto .logo{
+  width: 90px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.project .card-porto .logo img{
+  max-width: 90px;
+  border-radius: none;
+}
+.project .card-porto .img{
+  border-radius: 12px;
+}
+.project .project-stack{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 15px;
+  gap: 2px;
+  font-size: 20px;
+}
+.project .card-animation{
   opacity: 1;
   transform: translateY(0);
 }
-.portofolio .bottom-card{
-  padding: 10px;
+.project .bottom-card{
+  padding: 0px 10px;
 }
-.portofolio .name{
+.project .name{
   font-weight: 700;
+  font-size: 18px;
 }
-.portofolio i{
+.project i{
   font-weight: 400;
 }
 @media screen and (max-width: 1136px){
-  .portofolio{
+  .project{
     gap: 50px;
   }
-  .portofolio .card-porto{
+  .project .card-porto{
     width: 28vw;
   }
 }
 @media screen and (max-width: 816px){
-  .portofolio{
+  .project{
     grid-template-columns: auto auto;
     gap: 40px;
   }
-  .portofolio .card-porto{
+  .project .card-porto{
     width: 40vw;
   }
 }
 @media screen and (max-width: 700px){
-  .portofolio{
+  .project{
     grid-template-columns: auto ;
     gap: 30px;
   }
-  .portofolio .card-porto{
+  .project .card-porto{
     width: 80vw;
   }
-  .portofolio .title h1{
+  .project .title h1{
     font-size: 10vw;  
   }
 }
@@ -441,7 +473,7 @@ footer{
 }
 footer h1{
   font-size: 8vw;
-  color: var(--primary-color-light);
+  color: var(--footer-text);
 }
 footer li{
   list-style: none;
